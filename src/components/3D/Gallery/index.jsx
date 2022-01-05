@@ -29,6 +29,10 @@ export default function ArtGallery(props) {
       scene.fog = new FogExp2(color, density);
     },[gl, scene])
 
+    useEffect(() => {
+      console.log(nodes)
+    })
+
     return (
       <group ref={group} {...props} dispose={null}>
         <mesh geometry={nodes.render_border_dome.geometry} material={nodes.render_border_dome.material} />
