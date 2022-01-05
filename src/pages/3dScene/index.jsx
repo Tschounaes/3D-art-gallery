@@ -25,8 +25,7 @@ import BackButton from '../../components/BackButton';
 const cache = {};
 const importAll = (r) => r.keys().forEach(key => cache[key] = r(key));
 importAll(require.context('../../assets/exibition', false, /\.(png|jpe?g|svg)$/));
-const images = Object.entries(cache).map(module => module[1].default);
-
+const images = Object.entries(cache).map(module => module[1]);
 
 const ThreeDeSite = () => {
     const container_ref = useRef();
